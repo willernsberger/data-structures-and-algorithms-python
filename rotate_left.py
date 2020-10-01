@@ -11,6 +11,6 @@ def rotate_left(arr, rotation):
     return result
 
 # testing data and driver function call
-arr = [1, 2, 3, 4, 5, 6, 7]
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
 rotation = 2
 print(str(rotate_left(arr, rotation)))
