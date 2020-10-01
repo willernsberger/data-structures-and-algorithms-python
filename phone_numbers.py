@@ -1,4 +1,4 @@
-# given a list of "valid words" and a phone number of length k
+# given a list of "valid words" and a phone number
 # return all the words that appear in the valid words list
 # which could have been constructed from the phone number
 
