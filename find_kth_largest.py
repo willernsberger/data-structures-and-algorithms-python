@@ -4,6 +4,7 @@ import heapq
 # there are multiple posisble solutions, with different implementations
 # and runtimes
 
+
 # O(kn^2) brute force solution, iterating the array to find the largest element
 # and removing it until we have removed kth largest
 def find_kth_largest(arr, k):
@@ -39,22 +40,6 @@ def find_kth_largest_3(arr, k):
     return largest
 
 
-# O(n) quick select implementation
-def find_kth_largest_4(arr, k):
-
-    # pick a pivot
-    # swap the pivot
-    # iterate from a starting index...
-    # pushing smaller values left
-    # eventually swap the pivot back into place
-    # now everything left of the pivot is guaranteed smaller, right guaranteed larger
-
-    # repeat the above steps, each cycle prunes some of the remaining elements
-    # if after a cycle, the pivot has k-1 elements greater, we have found the kth largest
-
-    return 0
-
-
 def partition(arr, start, end):
     sliced = arr[start:end + 1]
     print(str(sliced))
@@ -72,6 +57,7 @@ def partition(arr, start, end):
     sliced = arr[start:end + 1]
     print(str(sliced))
     return index
+
 
 # O(n) expected performance, O(n^2) worst case performance
 def quick_select(arr, k):
@@ -99,9 +85,9 @@ def quick_select(arr, k):
             continue
 
 
+# testing data
 k = 3  # 13
 arr = [1, 8, 2, 6, 11, 4, 3, 15, 7, 0, 10, 12, 5, 14, 13, 9]
 
-# print(find_kth_largest_4(arr, k))
-# print(partition(arr, 0, len(arr)))
+# driver function
 print(quick_select(arr, k))
