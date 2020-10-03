@@ -24,10 +24,12 @@ def find_kth_largest(arr, k):
     # return the most recent max element
     return largest
 
+
 # O(nlog(n)) sort the array, return the element k from last in the array
 def find_kth_largest_2(arr, k):
     arr.sort()
     return arr[-k]
+
 
 # O(nlog(n)) build a heap, remove k elements from the heap, returning the last element removed
 def find_kth_largest_3(arr, k):
@@ -64,7 +66,6 @@ def quick_select(arr, k):
     kth_index = len(arr) - k
     left = 0
     right = len(arr) - 1
-
     index = partition(arr, left, right)
 
     while True:
