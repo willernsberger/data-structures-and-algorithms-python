@@ -33,7 +33,7 @@ def print_level_by_level(node):
             print('')
             counter = children_counter
 
-
+# test tree
 root = Node('a', [])
 root.children.append(Node('b', []))
 root.children.append(Node('c', []))
@@ -41,4 +41,5 @@ root.children[1].children.append(Node('d', []))
 root.children[1].children.append(Node('e', []))
 root.children[1].children.append(Node('f', []))
 
+# driver call
 print_level_by_level(root)
