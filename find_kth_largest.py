@@ -43,8 +43,6 @@ def find_kth_largest_3(arr, k):
 
 
 def partition(arr, start, end):
-    sliced = arr[start:end + 1]
-    print(str(sliced))
     pivot = arr[end]
     index = start
     # scan through every value in the array (except the pivot)
@@ -56,8 +54,6 @@ def partition(arr, start, end):
             index += 1
     # swap the pivot into position in the array
     arr[end], arr[index] = arr[index], arr[end]
-    sliced = arr[start:end + 1]
-    print(str(sliced))
     return index
 
 
