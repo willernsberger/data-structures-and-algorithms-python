@@ -42,10 +42,3 @@ root.children[1].children.append(Node('e', []))
 root.children[1].children.append(Node('f', []))
 
 print_level_by_level(root)
-
-
-
-
-
-
-
