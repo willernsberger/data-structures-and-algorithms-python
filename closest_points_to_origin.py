@@ -18,6 +18,8 @@ def closest_points_to_origin(points, k):
     return points[:k]
 
 
+# O(n) time to build the heap, O(klog(n)) to find k least distances
+# O(n) space for the heap data structure
 def closest_points_to_origin_heap(points, k):
     data = []
     for p in points:
