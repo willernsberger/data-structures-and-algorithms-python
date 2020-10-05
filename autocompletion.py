@@ -4,19 +4,19 @@
 class Node:
     def __init__(self, value):
         self.value = value
-        self.children = []
+        self.children = {}
 
     def add_word(self, word):
         if not word:
             return
         char = word[0]
-        for child in self.children:
-            if child.value == char:
-                child.add_word(word[1:])
-                return
-        child = Node(char)
-        self.children.append(child)
-        child.add_word(word[1:])
+
+        if char in self.children:
+            self.children[char].add_word(word[1:])
+        else:
+            child = Node(char)
+            self.children[child.value] = child
+            child.add_word(word[1:])
 
     def __repr__(self):
         if self.value:
@@ -50,22 +50,20 @@ def complete_words_helper(semi, node, complete, word):
     # check the edge case that semi does not exist in the autocomplete set
     if semi and not node.children:
         complete = []
-        return
     # check the base case
     # populating complete with autocorrect word
-    if not node.children:
+    elif not node.children:
         complete.append(word)
-        return
     # traverse the trie until we have found the node that represents last of the semi-complete
-    if semi:
+    elif semi:
         word += semi[0]
-        for child in node.children:
-            if child.value == semi[0]:
-                complete_words_helper(semi[1:], child, complete, word)
+        char = semi[0]
+        if char in node.children:
+            complete_words_helper(semi[1:], node.children[char], complete, word)
     # traverse the descendants of the semi-complete
     else:
-        for child in node.children:
-            complete_words_helper(semi, child, complete, word + child.value)
+        for k, v in node.children.items():
+            complete_words_helper(semi, node.children[k], complete, word + k)
 
 
 def autocomplete(words, semi):
@@ -79,7 +77,7 @@ def autocomplete(words, semi):
 
 # test data
 words = ['dog', 'door', 'dark', 'cat', 'elephant']
-semi = 'do'
+semi = 'd'
 
 # driver call
 print(autocomplete(words, semi))
