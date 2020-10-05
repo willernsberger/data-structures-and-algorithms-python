@@ -9,9 +9,9 @@ def target_subarray_brute_force(arr, value):
 
     for start in range(0, len(arr)):
         for end in range(start, len(arr)):
-            subarray_sum = sum(arr[start:end])
+            subarray_sum = sum(arr[start:end + 1])
             if subarray_sum == value:
-                subarray = [start, end - 1]
+                subarray = [start, end]
                 return subarray
 
     return subarray
@@ -40,8 +40,8 @@ def target_subarray_pointer_manipulation(arr, value):
 
 
 # testing
-arr = [1, 3, 2, 5, 7, 2, 4, 5, 9, 1, 4, 8]
-value = 14
+arr = [1, 3, 2, 5, 7, 2, 4, 5, 9, 1, 4, 100]
+value = 100
 
 # driver
-print(target_subarray_pointer_manipulation(arr, value))
+print(target_subarray_brute_force(arr, value))
