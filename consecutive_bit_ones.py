@@ -37,8 +37,25 @@ def consecutive_bit_ones_modulo(decimal):
     return consecutive
 
 
+# O(n) time with respect to the number of binary digits
+# O(1) space
+def consecutive_bit_ones_bit_shifing(decimal):
+    consecutive, count = 0, 0
+    bit_mask = 1
+
+    while decimal > 0:
+        remainder = decimal & bit_mask
+        if remainder == 0:
+            consecutive = max(count, consecutive)
+            count = 0
+        if remainder == 1:
+            count += 1
+        decimal = decimal >> 1
+    return consecutive
+
+
 # testing data
 decimal_number = 12345  # 11000000111001
 
 # driver
-print(consecutive_bit_ones_modulo(decimal_number))
+print(consecutive_bit_ones_bit_shifing(decimal_number))
