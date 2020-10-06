@@ -56,8 +56,8 @@ def anagram_test(shorter, longer):
 
 
 # testing
-longer = 'adcbacdacb'
-shorter = 'abc'
+long = 'adcbacdacb'
+short = 'abc'
 
 # driver
-print(anagram_test(shorter, longer))  # True
+print(anagram_test(short, long))  # True
