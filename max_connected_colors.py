@@ -1,14 +1,13 @@
-from collections import deque
-
 # given a grid with one color assigned to each square in the grid
 # determine the maximum number of connected squares with the same color
 # the grid does not wrap around
 # squares connect up, down, left right
+from collections import deque
+
+
 # linear time with respect to the number of squares as each is evaluated only once
 # linear space as the elements on the queue and the number of elements in the
-# deduplication map are bounded by the number of squares
-
-
+# deduplication map is bounded by the number of squares
 def count_connected(grid, explored, row, column):
     count = 0
     color = grid[row][column]
