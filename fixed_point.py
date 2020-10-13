@@ -3,11 +3,15 @@
 # is equal to the index.
 
 
+# Sublinear time complexity as the while loop partitioning prunes
+# half of the remaining array with each iteration until
+# the fixed point is found.
+# Constant time for a few variables.
 def fixed_point(arr):
     start = 0
     end = len(arr) - 1
     index = (end - start)//2
-    while(True):
+    while True:
         if arr[index] == index:
             return index
         elif start == end:
