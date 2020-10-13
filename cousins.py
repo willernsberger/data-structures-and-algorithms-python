@@ -87,4 +87,4 @@ input_root.right.right = input_node
 
 # driver
 s = Solution(input_root, input_node)
-print(s.find_the_cousins())
+print(s.find_the_cousins())  # [4, 5]
