@@ -3,6 +3,7 @@
 # spaces forward one could hop, determine the least number
 # of hops it would take to get to the end of the array.
 
+
 # Linear time with respect to the number of positions in the array.
 # Constant space for a few variables.
 def least_hops(positions):
@@ -36,5 +37,4 @@ def look_ahead(start_position, positions):
     return distance
 
 
-print(least_hops([3, 2, 5, 1, 1, 9, 4, 4]))
-# 2 hops
+print(least_hops([3, 2, 5, 1, 1, 9, 4, 4]))  # 2 hops
