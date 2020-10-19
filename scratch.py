@@ -6,7 +6,7 @@ old_list = [1, 2, 3, 4, 5]
 new_list = [n + 1 for n in old_list]
 print(new_list)
 
-# new_list = [expression for member in iterable if onditional]
+# new_list = [expression for member in iterable if conditional]
 old_list = [1, 2, 3, 4, 5]
 new_list = [n + 1 for n in old_list if n > 3]
 print(new_list)
