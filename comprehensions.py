@@ -1,4 +1,4 @@
-# just a scratch pad for trying things out
+# a few examples of using comprehensions
 
 # list comprehensions
 # new_list = [expression for member in iterable]
@@ -74,10 +74,3 @@ print(new_set)
 # requires both the key and value
 new_dictionary = {k: k*k for k in range(10)}
 print(new_dictionary)
-
-# unpacking
-names = ['Peter Parker', 'Clark Kent', 'Wade Wildson', 'Bruce Wayne']
-heroes = ['Spiderman', 'Batman', 'Deadpool', 'Batman']
-for name, hero in names, heroes:
-    print(name + ' ' + hero)
-
