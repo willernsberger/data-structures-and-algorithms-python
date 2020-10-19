@@ -1,4 +1,4 @@
-# just a scratch pad for trying things out
+# A few handy exmpales of packing and unpacking iterables.
 
 # from itertools import zip_longest
 
@@ -86,5 +86,3 @@
 # print(a)
 # print(b)
 # print(c)
-
-
