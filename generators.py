@@ -1,4 +1,4 @@
-# just a scratch pad for trying things out
+# Sample usage of generators.
 
 # You can create a generator object with the yield statement.
 # The generator object take an iterable and an expression.
