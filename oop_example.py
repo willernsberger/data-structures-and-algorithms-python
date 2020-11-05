@@ -1,6 +1,5 @@
 # an example of inheritance in python
 
-
 class Thing(object):
     def __init__(self):
         pass
