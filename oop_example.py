@@ -1,7 +1,17 @@
-# example inheritance
+# an example of inheritance in python
 
-class Person(object):
+
+class Thing(object):
+    def __init__(self):
+        pass
+
+    def reveal_identity(self):
+        print("I am just a thing.")
+
+
+class Person(Thing):
     def __init__(self, name):
+        super(Person, self).__init__()
         self.name = name
 
     def reveal_identity(self):
@@ -18,8 +28,10 @@ class SuperHero(Person):
         print("And I am " + self.hero_name + ".")
 
 
-Bill = Person('William Ernsberger')
-SuperMan = SuperHero('Clark Kent', 'SuperMan')
+pencil = Thing()
+bill = Person("William Ernsberger")
+superman = SuperHero("Clark Kent", "SuperMan")
 
-Bill.reveal_identity()
-SuperMan.reveal_identity()
+pencil.reveal_identity()
+bill.reveal_identity()
+superman.reveal_identity()
